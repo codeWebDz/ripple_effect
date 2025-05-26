@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #6e7dc246;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+   
+   
+  }
+  
+  img {
+    border-radius: 50%;
+    opacity: 0.98;
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 1px 100px #2b58b1;
+
+  }
+  
+  /* Cercle d’onde autour de l’image */
+  .cercle {
+    
+    position: absolute;
+    z-index: -1;
+    width: 50px;
+    height: 50px;
+    top: 12.1%;
+    border-radius: 50%;
+    background: #0f40bd88;
+    animation: ripple 5s infinite ease-out;
+    animation-delay: 0s;
+  }
+ 
+  
+  /* Ondes supplémentaires (plus petites) */
+  .cercle::before,
+  .cercle::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: #0f40bdb0;
+
+  }
+  
+  .cercle::before {
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 60%;  
+    z-index: 10;
+
+
+  }
+  
+  .cercle::after {
+    top: 10%;
+    left: 10%;
+    width: 80%;
+    height: 80%;
+
+  }
+  
+  @keyframes ripple {
+    0% {
+      transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(10);
+      opacity: 0;
+    }
+  }
+
+
+  /* footer */
+footer{
+    position: absolute;
+    bottom: 5%;
+    font-size: 29px;
+  }
+  footer a , footer{
+    color: #3c879e;
+  
+  }
+  
